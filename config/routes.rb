@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'welcome_pages#main_page'
+  root 'welcome_pages#home'
   get '/my_profile' => "welcome_pages#my_profile"
   get '/community'  => "welcome_pages#community"
   get '/publishing' => "welcome_pages#publishing"

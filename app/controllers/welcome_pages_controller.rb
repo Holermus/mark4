@@ -1,6 +1,6 @@
 class WelcomePagesController < ApplicationController
   
-  def main_page
+  def home
   end
   
   def shop
