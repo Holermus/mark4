@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   root 'welcome_pages#home'
   get '/my_profile' => "welcome_pages#my_profile"
   get '/community'  => "welcome_pages#community"
