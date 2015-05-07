@@ -14,6 +14,7 @@
 	<%= link_to 'My profile', my_profile_path %>
 	
 <% if user_signed_in? %>
+	<%= link_to "Log out", destroy_user_session_path, :method => :delete %> </br>
 	Logged In! (tlacitko Log Out)
 <% else %>
 	<%= form_for(:user, :url => session_path(:user)) do |f| %> </br>
