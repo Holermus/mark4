@@ -1,9 +1,11 @@
 <h1>Welcome to Booquora!</h1>
 
-	<% if user_signed_in? %>
-		You are logged in!
-	<% else %>
-		Logged out!
-	<% end %>
+<%= form_for(User.new, :url => new_user_registration_path) do |f| %>
+  <%= f.email_field :email %> </br>
+  <%= f.password_field :password %> </br>
+  <%= button_tag :type => :submit do %>
+    Sign up
+  <% end %>
+<% end %>
 	
 	
