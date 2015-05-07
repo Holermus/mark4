@@ -13,6 +13,19 @@
 	<%= link_to 'Community', community_path %> | 
 	<%= link_to 'My profile', my_profile_path %>
 	
+<% if user_signed_in? %>
+	Logged In! (tlacitko Log Out)
+<% else %>
+	<%= form_for(:user, :url => session_path(:user)) do |f| %> </br>
+ 		 <%= f.text_field :email %> </br>
+ 		 <%= f.password_field :password %> </br>
+  		 <%= f.check_box :remember_me %>
+ 		 <%= f.label :remember_me %> </br>
+  		 <%= f.submit 'Sign in' %> </br>
+  		 <%= link_to "Forgot your password?", new_password_path(:user) %>
+  	<% end %>
+<% end %>
+	
 	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 	
