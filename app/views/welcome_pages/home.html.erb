@@ -1,11 +1,18 @@
-<h1>Welcome to Booquora!</h1>
+<center><h1>Welcome to Booquora!</h1></center>
 
-<%= form_for(User.new, :url => new_user_registration_path) do |f| %>
-  <%= f.email_field :email %> </br>
-  <%= f.password_field :password %> </br>
-  <%= button_tag :type => :submit do %>
-    Sign up
-  <% end %>
+<% if user_signed_in? %>
+	<center><p>Semiotics art party dreamcatcher, retro mlkshk swag letterpress raw denim deep v Portland. Master cleanse VHS forage locavore, Helvetica shabby chic jean shorts whatever disrupt pop-up iPhone. Freegan Truffaut raw denim plaid banh mi jean shorts Shoreditch, PBR&B gentrify Brooklyn flexitarian Etsy. IPhone kogi master cleanse, disrupt gastropub raw denim vinyl heirloom roof party Tumblr. Pinterest try-hard wayfarers hella, authentic lumbersexual master cleanse Williamsburg High Life literally photo booth. Distillery banjo Bushwick bicycle rights, plaid Godard single-origin coffee scenester selfies tofu Neutra master cleanse drinking vinegar. Cold-pressed leggings pour-over keffiyeh, Bushwick slow-carb craft beer narwhal squid.</p></center>
+<% else %>
+	<center><p>Semiotics art party dreamcatcher, retro mlkshk swag letterpress raw denim deep v Portland. Master cleanse VHS forage locavore, Helvetica shabby chic jean shorts whatever disrupt pop-up iPhone. Freegan Truffaut raw denim plaid banh mi jean shorts Shoreditch, PBR&B gentrify Brooklyn flexitarian Etsy. IPhone kogi master cleanse, disrupt gastropub raw denim vinyl heirloom roof party Tumblr. Pinterest try-hard wayfarers hella, authentic lumbersexual master cleanse Williamsburg High Life literally photo booth. Distillery banjo Bushwick bicycle rights, plaid Godard single-origin coffee scenester selfies tofu Neutra master cleanse drinking vinegar. Cold-pressed leggings pour-over keffiyeh, Bushwick slow-carb craft beer narwhal squid.</p></center>
+	<%= form_for(User.new, :url => new_user_registration_path) do |f| %>
+		<h2>New to Booquora? Sign up now!</h2>
+  		<%= f.email_field :email %> </br>
+ 		 <%= f.password_field :password %> </br>
+ 		 <%= button_tag :type => :submit do %>
+  		  Sign up
+  		<% end %>
+	<% end %>
 <% end %>
+	
 	
 	
