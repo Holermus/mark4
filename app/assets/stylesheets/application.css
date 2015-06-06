@@ -70,12 +70,66 @@ body{
 		-moz-border-radius: 4px;
 		-khtml-border-radius: 4px;
 		-webkit-border-radius: 4px;
-		border-color: rgba(102, 101, 95, 0.3);
-		width: 250px;
+		border-color: rgba(0, 0, 0, 1);
+		width: 265px;
 		height: 35px;
 		margin-bottom: 8px;
-}	
-/*.rcorners { */
+		font-size: 20px;
+		color: silver;
+}
+#new_user button {
+		width: 80px;
+		height: 26px;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-khtml-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		background-color: rgba(56, 56, 56, 0.7);
+		border-color: rgba(0, 0, 0, 1);
+		color: white;
+		font-family: 'Open Sans', sans-serif;		
+}
+#new_user button:visited {
+		width: 80px;
+		height: 26px;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-khtml-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		background-color: rgba(26, 255, 11, 0.7);
+		border-color: rgba(0, 0, 0, 1);
+		color: white;
+		font-family: 'Open Sans', sans-serif;		
+}
+#new_user button:hover {
+		width: 80px;
+		height: 26px;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-khtml-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		background-color: rgba(26, 255, 11, 0.7);
+		border-color: rgba(0, 0, 0, 1);
+		color: white;
+		font-family: 'Open Sans', sans-serif;		
+}
+#new_user button:active {
+		width: 95px;
+		height: 28px;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-khtml-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		background-color: rgba(26, 255, 11, 0.7);
+		border-color: rgba(0, 0, 0, 1);
+		color: white;
+		font-family: 'Open Sans', sans-serif;		
+}		
+input {
+		text-align: center;
+		background-color: rgba(0,0,0,0.8);
+}
+/*.rcorners { 
      	border-radius: 12px;
    		border: 1px solid #252525;
   		padding: 10px; 
@@ -85,4 +139,14 @@ body{
     	height: auto;
     	background-color:black;
     	opacity:0.5;
+}	*/
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+color: silver;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+color: silver;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+color: silver;
 }
