@@ -50,6 +50,9 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 gem 'bcrypt-ruby'
+
+gem 'rails_12factor'
