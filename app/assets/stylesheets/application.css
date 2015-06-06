@@ -78,8 +78,8 @@ body{
 		color: silver;
 }
 #new_user button {
-		width: 80px;
-		height: 26px;
+		width: 90px;
+		height: 28px;
 		border-radius: 4px;
 		-moz-border-radius: 4px;
 		-khtml-border-radius: 4px;
@@ -90,8 +90,8 @@ body{
 		font-family: 'Open Sans', sans-serif;		
 }
 #new_user button:visited {
-		width: 80px;
-		height: 26px;
+		width: 90px;
+		height: 28px;
 		border-radius: 4px;
 		-moz-border-radius: 4px;
 		-khtml-border-radius: 4px;
@@ -102,8 +102,8 @@ body{
 		font-family: 'Open Sans', sans-serif;		
 }
 #new_user button:hover {
-		width: 80px;
-		height: 26px;
+		width: 90px;
+		height: 28px;
 		border-radius: 4px;
 		-moz-border-radius: 4px;
 		-khtml-border-radius: 4px;
@@ -114,15 +114,16 @@ body{
 		font-family: 'Open Sans', sans-serif;		
 }
 #new_user button:active {
-		width: 95px;
+		width: 90px;
 		height: 28px;
 		border-radius: 4px;
 		-moz-border-radius: 4px;
 		-khtml-border-radius: 4px;
 		-webkit-border-radius: 4px;
-		background-color: rgba(26, 255, 11, 0.7);
+		background-color: rgba(26, 255, 11, 1);
 		border-color: rgba(0, 0, 0, 1);
-		color: white;
+		color: black;
+		font-weight: bold;
 		font-family: 'Open Sans', sans-serif;		
 }		
 input {
