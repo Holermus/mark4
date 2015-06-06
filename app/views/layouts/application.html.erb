@@ -5,32 +5,32 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body>	
+	<div class="nav">
+		<a href="/" title="http://localhost:3000/" class="mainlogo">
+  				<img src="/assets/logo7.png" alt="Booquora" />
+  			</a>
+		<ul>
+			<li><%= link_to 'SHOP', shop_path %></li>
+			<li><%= link_to 'PUBLISHING', publishing_path %></li>
+			<li><%= link_to 'COMMUNITY', community_path %></li>
+			<li><%= link_to 'MY PROFILE', my_profile_path %></li>
+			<% if user_signed_in? %>
+				<li><%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %></li>
+			<% else %>
+				<li><%= link_to "LOG IN", new_user_session_path %>
+			<% end %>
+		</ul>
+	</div>
 	
-	<%= link_to 'Shop', shop_path %> | 
-	<%= link_to 'Publishing', publishing_path %> | 
-	<%= link_to 'Community', community_path %> | 
-	<%= link_to 'My profile', my_profile_path %>
-	
-<% if user_signed_in? %>
-	<%= link_to "Log out", destroy_user_session_path, :method => :delete %> </br>
-	Logged In! (tlacitko Log Out)
-<% else %>
-	<%= form_for(:user, :url => session_path(:user)) do |f| %> </br>
- 		 <%= f.text_field :email %> </br>
- 		 <%= f.password_field :password %> </br>
-  		 <%= f.check_box :remember_me %>
- 		 <%= f.label :remember_me %> </br>
-  		 <%= f.submit 'Sign in' %> </br>
-  		 <%= link_to "Forgot your password?", new_password_path(:user) %>
-  	<% end %>
-<% end %>
-	
+	</br>	
+	</br>	
+	</br><%= yield %>
+		
 	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+	<p class="alert"><%= alert %></p>
 	
-<%= yield %>
-
 </body>
 </html>
