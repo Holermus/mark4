@@ -1,7 +1,7 @@
 body{
-		background-image:url('/assets/dusty-sky2.jpg');
+		background-image:url('/assets/spacedog2.jpg');
 		margin: 0px;
-		background-color: #eee;
+		filter: brightness(50%);
 }
 .nav {
 	   	width: 100%;
@@ -51,7 +51,7 @@ body{
 .nadpis{
 		text-align: center;
 		font-family: 'Open Sans', sans-serif;
-		color: rgb(192, 192, 192)
+		color: rgb(255, 255, 255)
 }
 .text-intro p{
 		font-family: 'Open Sans', sans-serif;
@@ -59,7 +59,7 @@ body{
     	width: 700px;
     	margin-left: auto;
     	margin-right: auto;
-    	color: rgb(192, 192, 192)
+    	color: rgb(255, 255, 255)
 }
 .sign-up {
 		text-align: center;
