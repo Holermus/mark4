@@ -1,7 +1,6 @@
 body{
 		background-image:url('/assets/spacedog2.jpg');
 		margin: 0px;
-		filter: brightness(50%);
 }
 .nav {
 	   	width: 100%;
