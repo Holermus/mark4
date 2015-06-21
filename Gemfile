@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.9'
+gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 
-gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -18,7 +18,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -55,11 +55,3 @@ end
 gem 'bcrypt-ruby'
 
 gem 'rails_12factor', group: :production
-
-gem 'social_stream', :git => 'https://github.com/luca/social_stream.git'
-
-gem 'activesupport', '~> 4.0.9'
-
-gem 'railties', '~> 4.0.9'
-
-gem 'rmagick', '2.15.2', :path => 'C:\Ruby21-x64\lib\ruby\gems\2.1.0\gems\rmagick-2.15.2'

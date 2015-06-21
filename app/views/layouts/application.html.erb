@@ -16,7 +16,10 @@
 			<li><%= link_to 'SHOP', shop_path %></li>
 			<li><%= link_to 'PUBLISHING', publishing_path %></li>
 			<li><%= link_to 'COMMUNITY', community_path %></li>
-			<li><%= link_to 'MY PROFILE', my_profile_path %></li>
+			<% if user_signed_in? %>
+				<li><%= link_to 'MY PROFILE', community_path %></li>
+			<% else %>
+			<% end %>
 			<% if user_signed_in? %>
 				<li><%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %></li>
 			<% else %>

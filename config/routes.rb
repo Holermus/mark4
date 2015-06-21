@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   
   devise_for :users
   root 'welcome_pages#home'
-  get '/my_profile' => "welcome_pages#my_profile"
+  get '/userz/:id' => "users#user_page", as: :profile
   get '/community'  => "welcome_pages#community"
   get '/publishing' => "welcome_pages#publishing"
   get '/shop'       => "welcome_pages#shop"
+  resources :users
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
