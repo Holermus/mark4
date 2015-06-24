@@ -1,5 +1,6 @@
 <h1>WelcomePages#my_profile</h1>
 <h2>There you go!</h2>
+<%= image_tag @user.image.url(:thumb) %>
 <%= form_for @user, :url => profile_path(current_user), :html => { :multipart => true } do |form| %>
   <%= form.file_field :image %>
 <% end %>
