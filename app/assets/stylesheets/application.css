@@ -1,6 +1,10 @@
 body{
-		background-image:url('/assets/spacedog2.jpg');
+		background: url('/assets/spacedog2.jpg') no-repeat center center fixed;
 		margin: 0px;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
 }
 .nav {
 	   	width: 100%;
