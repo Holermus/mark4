@@ -55,5 +55,3 @@ end
 gem 'bcrypt-ruby'
 
 gem 'rails_12factor', group: :production
-
-gem "paperclip", "~> 4.2"
