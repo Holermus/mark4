@@ -3,6 +3,6 @@
 <%= @user.id %>
 <%= @user.email %>
 
-<%= form_for @user, :url => users_path, :html => { :multipart => true } do |form| %>
+<%= form_for @user, :url => profile_path, :html => { :multipart => true } do |form| %>
   <%= form.file_field :avatar %>
 <% end %>
