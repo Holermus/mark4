@@ -2,4 +2,11 @@
 <h2>There you go!</h2>
 <%= @user.id %>
 <%= @user.email %>
+
+<%= form_for @user, :url => profile_path(current_user), :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
+
+<%= image_tag @user.avatar.url %>
+<%= image_tag @user.avatar.url(:medium) %>
 <%= image_tag @user.avatar.url(:thumb) %>
