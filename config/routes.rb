@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   devise_for :users
+  resources :users
   root 'welcome_pages#home'
   get '/community'  => "welcome_pages#community"
   get '/publishing' => "welcome_pages#publishing"

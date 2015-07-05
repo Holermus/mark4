@@ -7,10 +7,13 @@ class UsersController < ApplicationController
   def create
     @user = User.create( user_params )
   end
-  
-  private
-  
-  def user_params
-    params.require(:user).permit(:avatar)
+
+  def update
+    @user = User.update(user_params)
   end
+  
+    def user_params
+       params.require(:user).permit(:profilepic)
+    end
+  
 end

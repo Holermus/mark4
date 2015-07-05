@@ -1,8 +1,12 @@
-<h1>WelcomePages#my_profile</h1>
-<h2>There you go!</h2>
-<%= @user.id %>
-<%= @user.email %>
-
-<%= form_for @user, :url => profile_path, :html => { :multipart => true } do |form| %>
-  <%= form.file_field :avatar %>
+<h2>There you go muthafuckaaaah!</h2>
+<%= image_tag @user.profilepic.url(:medium) %>
+<%= form_for @user, :url => {:action => "create"}, html: { multipart: true } do |f| %>
+	<div>	
+		<%= f.label :profilepic %><br>
+		<%= f.file_field :profilepic %>
+	</div>
+	
+	<div>	
+		<%= f.submit %>
+	</div>
 <% end %>
