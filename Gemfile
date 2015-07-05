@@ -57,3 +57,4 @@ gem 'bcrypt-ruby'
 gem 'rails_12factor', group: :production
 
 gem 'paperclip', '~> 4.1'
+gem 'aws-sdk' #Amazon S3 pro Heroku paperclip (S3 je cloud pro ukládání files)
