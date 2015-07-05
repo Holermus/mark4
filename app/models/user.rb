@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
          
-  #paperclip
-  has_attached_file :profilepic, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#"}, :default_url => "/profilepics/:style/missing.png"
-  validates_attachment_content_type :profilepic, content_type: /\Aimage\/.*\Z/
+  has_attached_file :profilepic, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :profilepic, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif", "image/jpe"]
 end

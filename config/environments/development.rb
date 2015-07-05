@@ -43,6 +43,6 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
   
-  #paperclip cesta k imagemagick
-  Paperclip.options[:command_path] = "/c/Windows/system32/"
+  #paperclip
+  Paperclip.options[:command_path] = "/c/ImageMagick/"
 end

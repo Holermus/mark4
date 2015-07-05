@@ -4,16 +4,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
-  def create
-    @user = User.create( user_params )
-  end
-
   def update
-    @user = User.update(user_params)
+    @user.update(post_params)
   end
   
-    def user_params
-       params.require(:user).permit(:profilepic)
-    end
+  
+  private
+  
+  def post_params
+    params.require(:user).permit(:profilepic)
+  end
   
 end
