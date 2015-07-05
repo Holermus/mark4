@@ -5,3 +5,8 @@
 
 <%= image_tag @user.profilepic.url(:medium) %><br>
 <%= link_to "Edit profile", edit_user_registration_path(current_user) %>
+
+<%= form_for(@user, multipart: true) do |f| %>
+	<%= f.file_field :profilepic %>
+	<%= f.submit 'Save a picture' %>
+<% end %>
