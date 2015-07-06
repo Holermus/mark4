@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:profilepic, :profilepic_file_name)
+    params.require(:user).permit(:profilepic)
   end
   
 end
