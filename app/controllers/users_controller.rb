@@ -4,8 +4,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
-  def create_profilepic
+  def create
     @user = User.create( user_params )
+    @user = User.save
   end
   
   private
