@@ -3,7 +3,7 @@
 <%= @user.id %>
 <%= @user.email %><br>
 
-<%= image_tag @user.profilepic.url(:medium) %><br>
+<%= image_tag @user.profilepic.url(:thumb) %><br>
 <%= link_to "Edit profile", edit_user_registration_path(current_user) %>
 
 <%= form_for @user, :html => { :multipart => true } do |f| %>
