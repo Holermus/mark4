@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/publishing' => "welcome_pages#publishing"
   get '/shop'       => "welcome_pages#shop"
   get '/:id' => "users#user_page", as: :profile
+  patch '/profilepicupload' => "users#create_profilepic", as: :create_profilepic
   resources :users
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
