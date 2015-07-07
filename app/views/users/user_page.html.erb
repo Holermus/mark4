@@ -1,10 +1,5 @@
-<h1>WelcomePages#my_profile</h1>
-<h2>There you go, MOTHAFUCKAAAAH!</h2>
-<%= @user.id %>
-<%= @user.email %><br>
-
-<%= image_tag @user.profilepic.url(:thumb) %><br>
-<%= link_to "Edit profile", edit_user_registration_path(current_user) %>
+<img class="avatar"
+<%= image_tag @user.profilepic.url(:avatar) %><br>
 
 <%= form_for @user, :html => { :multipart => true } do |f| %>
 	<%= f.file_field :profilepic %>
