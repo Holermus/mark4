@@ -51,6 +51,13 @@ body{
   		width: 138px;
   		height: 33px;
 }
+.avatar_wrapper{
+		height: 200px;
+  		width: 200px;
+  		top: 119px;
+  		left: 50px;
+  		position: absolute;
+}
 .avatar{
 		border-radius: 20px;
 		-webkit-border-radius: 20px;
@@ -58,8 +65,8 @@ body{
 		border:3px solid rgba(14, 17, 18, 0.84);
 		height: 200px;
   		width: 200px;
-  		top: 119px;
-  		left: 50px;
+  		top: -3px;
+  		left: -3px;
   		position: absolute;
   		pointer-events: none /*unselectable*/
 }
@@ -68,25 +75,50 @@ label.browseprofilepicbtn input[type="file"] {
     position: fixed;
     top: -1000px;
 }
+.container {
+ 		text-align: center;
+ 		color: white;
+   		font-size: 15px;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 17px;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none; 	
+		-o-user-select: none;
+		user-select: none;
+  }
 .browseprofilepicbtn {
-    border: 2px solid #AAA;
-    border-radius: 4px;
-    padding: 2px 5px;
-    margin: 2px;
-    background: #DDD;
+    border-radius: 0 0 17px 17px;
     display: inline-block;
+    top: 150px;
+    position: relative;
+    width: 200px;
+  	height: 50px;
 }
 .browseprofilepicbtn:hover {
-    background: #CCC;
+    background: rgba(5, 3, 3, 0.5);
+    cursor: hand;
+    cursor: pointer;
 }
 .browseprofilepicbtn:active {
-    background: #CCF;
+    background: rgba(5, 3, 3, 0.7);
+    cursor: hand;
+    cursor: pointer;
 }
-.browseprofilepicbtn :invalid + span {
-    color: #A44;
+.spanbtn {
+		padding: 150px 47px 29px 47px;
+  		border-radius: 17px;
+  		opacity: 0;
 }
-.browseprofilepicbtn :valid + span {
-    color: #4A4;
+.spanbtn:hover {
+		padding: 150px 47px 29px 47px;
+  		border-radius: 17px;
+  		opacity: 1;
+}
+.spanbtn:active {
+		padding: 150px 47px 29px 47px;
+  		border-radius: 17px;
+  		opacity: 1;
 }
 .nadpis{
 		text-align: center;

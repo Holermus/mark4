@@ -1,9 +1,15 @@
-<img class="avatar"
-<%= image_tag @user.profilepic.url(:avatar) %></img><br>
-<%= form_for @user, :html => { :multipart => true } do |f| %>
-	<label class="browseprofilepicbtn">
-		<%= f.file_field :profilepic %>
-		<span>Change picture</span>
-	</label>
-	<%= f.submit 'Save a picture' %>
-<% end %>
+<div class="avatar_wrapper">
+	<img class="avatar"
+		<%= image_tag @user.profilepic.url(:avatar) %>
+	</img>
+		<%= form_for @user, :html => { :multipart => true } do |f| %>
+			<label class="browseprofilepicbtn">
+				<%= f.file_field :profilepic %>
+				<div class="container">
+					<span class="spanbtn">
+						Change picture
+					</span>
+				</div>
+			</label>
+		<% end %>
+</div>
