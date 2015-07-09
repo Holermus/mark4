@@ -61,7 +61,32 @@ body{
   		top: 119px;
   		left: 50px;
   		position: absolute;
-  		pointer-events: none
+  		pointer-events: none /*unselectable*/
+}
+/*Change profile picture button*/
+label.browseprofilepicbtn input[type="file"] {
+    position: fixed;
+    top: -1000px;
+}
+.browseprofilepicbtn {
+    border: 2px solid #AAA;
+    border-radius: 4px;
+    padding: 2px 5px;
+    margin: 2px;
+    background: #DDD;
+    display: inline-block;
+}
+.browseprofilepicbtn:hover {
+    background: #CCC;
+}
+.browseprofilepicbtn:active {
+    background: #CCF;
+}
+.browseprofilepicbtn :invalid + span {
+    color: #A44;
+}
+.browseprofilepicbtn :valid + span {
+    color: #4A4;
 }
 .nadpis{
 		text-align: center;
@@ -145,17 +170,6 @@ input {
 		text-align: center;
 		background-color: rgba(0,0,0,0.6);
 }
-/*.rcorners { 
-     	border-radius: 12px;
-   		border: 1px solid #252525;
-  		padding: 10px; 
-    	width: 700px;
-    	margin-left: auto;
-    	margin-right: auto;
-    	height: auto;
-    	background-color:black;
-    	opacity:0.5;
-}	*/
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 color: silver;
