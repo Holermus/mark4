@@ -186,6 +186,7 @@ DEPENDENCIES
   bcrypt-ruby
   bootstrap-modal-rails
   byebug
+  cocaine
   coffee-rails (~> 4.1.0)
   devise
   jbuilder (~> 2.0)
