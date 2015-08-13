@@ -4,33 +4,20 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
-def create
-  @user = User.new(params[:user])
-  if @user.save
-    if params[:user][:profilepic].blank?
-      flash[:notice] = "Successfully created user."
-      redirect_to @user
-    else
-      render :action => "crop"
-    end
-  else
-    render :action => 'new'
+  def create
+    @user = User.create( user_params )
+    @user = User.save
   end
-end
-
-def update
-  @user = User.find(params[:id])
-  if @user.update_attributes(params[:user])
-    if params[:user][:profilepic].blank?
-      flash[:notice] = "Successfully updated user."
-      redirect_to @user
+  
+  def update
+    @user = User.find(params[:id])
+    
+    if @user.update_attributes( user_params )
+      redirect_to profile_path
     else
-      render :action => "crop"
+      redirect_to profile_path
     end
-  else
-    render :action => 'edit'
   end
-end
   
   private
   
