@@ -1,25 +1,15 @@
-<%= render "modals/crop_avatar" %>
 <div class="avatar_wrapper">
 	<img class="avatar"
 		<%= image_tag @user.profilepic.url(:avatar) %>
 	</img>
-		<!--
-			<%= form_for @user, :html => { :multipart => true, :id=>'avatar_autosubmit' } do |f| %>
-				<label class="browseprofilepicbtn">
-					<%= f.file_field :profilepic, onchange: "$('#avatar_autosubmit').submit();" %>
-					<div class="container">
-						<span class="spanbtn">
-							Change picture
-						</span>
-					</div>
-				</label>
-			<% end %>
-		-->
-	<div class="browseprofilepicbtn" data-toggle="modal" data-target="#myModal">
-		<div class="container">
-			<span class="spanbtn">
-				Change picture
-			</span>
-		</div>
-	</div>
+		<%= form_for @user, :html => { :multipart => true, :id=>'avatar_autosubmit' } do |f| %>
+			<label class="browseprofilepicbtn">
+				<%= f.file_field :profilepic, onchange: "$('#avatar_autosubmit').submit();" %>
+				<div class="container">
+					<span class="spanbtn">
+						Change picture
+					</span>
+				</div>
+			</label>
+		<% end %>
 </div>

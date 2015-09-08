@@ -58,6 +58,3 @@ gem 'rails_12factor', group: :production
 
 gem 'paperclip', '~> 4.1'
 gem 'aws-sdk', '< 2.0' #Amazon S3 pro Heroku paperclip (S3 je cloud pro ukládání files)
-gem 'jcrop-rails-v2'
-
-gem 'bootstrap-modal-rails'
