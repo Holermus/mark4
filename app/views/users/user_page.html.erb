@@ -1,3 +1,4 @@
+<!--User avatar section BEGINS-->
 <div class="avatar_wrapper">
 	<img class="avatar"
 		<%= image_tag @user.profilepic.url(:avatar) %>
@@ -13,3 +14,15 @@
 			</label>
 		<% end %>
 </div>
+<!--User avatar section ENDS-->
+
+<!--User posts section BEGINS-->
+
+<% unless @user.user_posts.empty? %>
+	<div class="user_posts_wrapper">
+		<table>
+			<%= render @user_posts %>
+		</table>
+	</div>
+	<%= will_paginate @user_posts %>
+<% end %>

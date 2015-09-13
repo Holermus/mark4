@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   
   def user_page
     @user = User.find(params[:id])
+    @user_posts = @user.user_posts.paginate(:page => params[:page])
   end
   
   def create
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:profilepic)
+    params.require(:user).permit(:profilepic, :content)
   end
   
 end
