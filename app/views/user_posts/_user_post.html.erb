@@ -1,9 +1,17 @@
 <tr>
 	<td class="user-post-background">
-		<span class="post-content"><%= user_post.content %></span> </br>
+		<img class="user-post-thumbnail"
+			<%= image_tag @user.profilepic.url(:thumb) %>
+		</img>
+		<span class="post-username">
+				<%= link_to "Hank Moody", profile_path(current_user) %> 
+		</span>
+		</br>
 		<span class="post-timestamp">
 			Posted <%= time_ago_in_words(user_post.created_at) %> ago.
-		</span>
+		</span> </br>
+		<span class="post-content"><%= user_post.content %></span> </br>
+		<div class="post-like" type="image" ></div>
 		<div class="bottom-post-border"></div>
 	</td>
 </tr>
