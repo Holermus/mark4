@@ -184,7 +184,8 @@ label.browseprofilepicbtn input[type="file"] {
 }
 /*user posts section*/
 .user_posts_wrapper {
-		width: 700px ;
+		width: 700px;
+		height: auto;
   		margin-left: auto ;
   		margin-right: auto ;
   		margin-top: 70px;
@@ -204,7 +205,9 @@ label.browseprofilepicbtn input[type="file"] {
 }
 .post-content {
 		margin: 4px 4px 4px 4px;
+		width: 692px;
 		display: inline-block;
+		word-wrap:break-word;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 15px;
 }

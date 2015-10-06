@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def user_page
     @user = User.find(params[:id])
     @user_posts = @user.user_posts.paginate(:page => params[:page])
+    @user_post = @user.user_posts.new
   end
   
   def create
