@@ -1,65 +1,30 @@
-<% if signed_in? %>	
-<!--View if SIGNED IN-->
-	<!--User avatar section BEGINS-->
-	<div class="avatar_wrapper">
-		<img class="avatar"
-			<%= image_tag @user.profilepic.url(:avatar) %>
-		</img>
-			<%= form_for @user, :html => { :multipart => true, :id=>'avatar_autosubmit' } do |f| %>
-				<label class="browseprofilepicbtn">
-					<%= f.file_field :profilepic, onchange: "$('#avatar_autosubmit').submit();" %>
-					<div class="container">
-						<span class="spanbtn">
-							Change picture
-						</span>
-					</div>
-				</label>
-			<% end %>
-	</div>
-	<!--User avatar section ENDS-->
+<!--User avatar section BEGINS-->
+<div class="avatar_wrapper">
+	<img class="avatar"
+		<%= image_tag @user.profilepic.url(:avatar) %>
+	</img>
+		<%= form_for @user, :html => { :multipart => true, :id=>'avatar_autosubmit' } do |f| %>
+			<label class="browseprofilepicbtn">
+				<%= f.file_field :profilepic, onchange: "$('#avatar_autosubmit').submit();" %>
+				<div class="container">
+					<span class="spanbtn">
+						Change picture
+					</span>
+				</div>
+			</label>
+		<% end %>
+</div>
+<!--User avatar section ENDS-->
 
-	<!--User posts section BEGINS-->
+<!--User posts section BEGINS-->
+<% unless @user.user_posts.empty? %>
 	<div class="user_posts_wrapper">
-		<%= render 'user_posts/user_post_form' %>
+		<table>
+			<%= render 'user_posts/user_post_form' %>
+			<div class="bottom-post-border"></div>
+			<%= render @user_posts %>
+		</table>
 	</div>
-	<% unless @user.user_posts.empty? %>
-		<div class="user_posts_wrapper">
-			<table>
-				<%= render @user_posts %>
-			</table>
-		</div>
-		<%= will_paginate @user_posts %>
-	<% end %> 
-	<!--END of view if SIGNED IN-->
-<% else %> 
-<!--View if NOT SIGNED IN-->
-	<!--User avatar section BEGINS-->
-	<div class="avatar_wrapper">
-		<img class="avatar"
-			<%= image_tag @user.profilepic.url(:avatar) %>
-		</img>
-			<%= form_for @user, :html => { :multipart => true, :id=>'avatar_autosubmit' } do |f| %>
-				<label class="browseprofilepicbtn">
-					<%= f.file_field :profilepic, onchange: "$('#avatar_autosubmit').submit();" %>
-					<div class="container">
-						<span class="spanbtn">
-							Change picture
-						</span>
-					</div>
-				</label>
-			<% end %>
-	</div>
-	<!--User avatar section ENDS-->
+	<%= will_paginate @user_posts %>
+<% end %> 
 
-	<!--User posts section BEGINS-->
-
-	<% unless @user.user_posts.empty? %>
-		<div class="user_posts_wrapper">
-			<table>
-				<%= render @user_posts %>
-			</table>
-		</div>
-		<%= will_paginate @user_posts %>
-	<% end %>
-<% end %>
-<!--END of view if NOT SIGNED IN-->

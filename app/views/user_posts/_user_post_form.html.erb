@@ -1,8 +1,5 @@
 <%= form_for @user_post do |f| %>
-	<div class="field">
-		<%= f.text_area :content %>
-	</div>
-	<div class="actions">
-		<%= f.submit "Submit" %>
-	</div>
+	<%= f.text_area :content, class: "user_post_input_area", placeholder: "Something you would like to share with us?", id: "post_textarea_elastic" %>
+
+		<%= f.submit "Publish", class: "user_post_input_button" %>
 <% end %>

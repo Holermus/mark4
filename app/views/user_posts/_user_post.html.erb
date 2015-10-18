@@ -11,7 +11,25 @@
 			Posted <%= time_ago_in_words(user_post.created_at) %> ago.
 		</span> </br>
 		<span class="post-content"><%= user_post.content %></span> </br>
-		<div class="post-like" type="image" ></div>
+		<div class="post-functions-wrapper">
+			<% if signed_in? %>
+				<% if current_user.admin? %>
+					<% if (current_user.admin?) && (current_user.id == user_post.user_id) %>
+						<%= render 'user_posts/partials/post_owner_functions' %>
+					<% else %>
+						<%= render 'user_posts/partials/post_admin_functions' %>
+					<% end %>
+				<% else %>
+					<% if current_user.id == user_post.user_id %>
+						<%= render 'user_posts/partials/post_owner_functions' %>
+					<% else %>
+						<%= render 'user_posts/partials/post_non_owner_functions' %>
+					<% end %>
+				<% end %>
+			<% else %>
+					<%= render 'user_posts/partials/post_non_logged_functions' %>
+			<% end %>
+		</div>
 		<div class="bottom-post-border"></div>
 	</td>
 </tr>
