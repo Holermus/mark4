@@ -147,7 +147,7 @@ label.browseprofilepicbtn input[type="file"] {
     cursor: pointer;
 }
 .spanbtn {
-		padding: 150px 47px 29px 47px;
+		padding: 150px 47px 34px 47px;
   		border-radius: 20px;
   		opacity: 0;
   		-webkit-user-select: none;
@@ -157,12 +157,12 @@ label.browseprofilepicbtn input[type="file"] {
 		user-select: none;
 }
 .spanbtn:hover {
-		padding: 150px 47px 29px 47px;
+		padding: 150px 47px 34px 47px;
   		border-radius: 20px;
   		opacity: 1;
 }
 .spanbtn:active {
-		padding: 150px 47px 29px 47px;
+		padding: 150px 47px 34px 47px;
   		border-radius: 20px;
   		opacity: 1;
 }

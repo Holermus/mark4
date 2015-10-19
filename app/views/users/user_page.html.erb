@@ -20,9 +20,27 @@
 <% unless @user.user_posts.empty? %>
 	<div class="user_posts_wrapper">
 		<table>
-			<%= render 'user_posts/user_post_form' %>
-			<div class="bottom-post-border"></div>
-			<%= render @user_posts %>
+			<% if signed_in? %>
+					<% if current_user.admin? %>
+						<% if (current_user.admin?) && current_page?(profile_path(current_user)) %>
+							<%= render 'user_posts/user_post_form' %>
+							<div class="bottom-post-border"></div>
+							<%= render @user_posts %>
+						<% else %>
+							<%= render @user_posts %>
+						<% end %>
+					<% else %>
+						<% if current_page?(profile_path(current_user)) %>
+							<%= render 'user_posts/user_post_form' %>
+							<div class="bottom-post-border"></div>
+							<%= render @user_posts %>
+						<% else %>
+							<%= render @user_posts %>
+						<% end %>
+					<% end %>
+			<% else %>
+				<%= render @user_posts %>
+			<% end %>
 		</table>
 	</div>
 	<%= will_paginate @user_posts %>
