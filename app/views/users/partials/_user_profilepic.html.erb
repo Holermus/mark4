@@ -1,0 +1,49 @@
+<% if signed_in? %>
+	<% if current_user.admin? %>
+		<div class="avatar_wrapper">
+			<img class="avatar"
+				<%= image_tag @user.profilepic.url(:avatar) %>
+			</img>
+			<%= form_for @user, :html => { :multipart => true, :id=>'avatar_autosubmit' } do |f| %>
+				<label class="browseprofilepicbtn">
+					<%= f.file_field :profilepic, onchange: "$('#avatar_autosubmit').submit();" %>
+					<div class="container">
+						<span class="spanbtn">
+							Change picture
+						</span>
+					</div>
+				</label>
+			<% end %>
+		</div>
+	<% else %>
+		<% if current_page?(profile_path(current_user)) %>
+			<div class="avatar_wrapper">
+				<img class="avatar"
+					<%= image_tag @user.profilepic.url(:avatar) %>
+				</img>
+				<%= form_for @user, :html => { :multipart => true, :id=>'avatar_autosubmit' } do |f| %>
+					<label class="browseprofilepicbtn">
+						<%= f.file_field :profilepic, onchange: "$('#avatar_autosubmit').submit();" %>
+						<div class="container">
+							<span class="spanbtn">
+								Change picture
+							</span>
+						</div>
+					</label>
+				<% end %>
+			</div>
+		<% else %>
+			<div class="avatar_wrapper_unselectable">
+				<img class="avatar"
+					<%= image_tag @user.profilepic.url(:avatar) %>
+				</img>
+			</div>
+		<% end %>
+	<% end %>
+<% else %>
+	<div class="avatar_wrapper_unselectable">
+		<img class="avatar"
+			<%= image_tag @user.profilepic.url(:avatar) %>
+		</img>
+	</div>
+<% end %>	
